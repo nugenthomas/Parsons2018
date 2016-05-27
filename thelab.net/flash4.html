@@ -1,0 +1,140 @@
+<html>
+<head>
+<title> Flash 4 </title>
+</head>
+<style>
+
+.star{
+  position:absolute;
+  top:160%;
+  left:100%;
+  width:30px;
+  height:30px;
+  margin:-5px 0 0 -5px;
+  background:rgba(255,255,255,1);
+  border-radius:50%;
+  animation:blackhole 5s infinite ease-in;
+  background: radial-gradient(circle at 7px 7px, #ffffff, #000);
+
+}
+
+.star + .star{
+  left:100%;
+  animation-delay:1200ms;
+  transform:scale(.7);
+  animation-speed:7s;
+}
+
+.star + .star + .star{
+  top:0%;
+  left:185%;
+  animation-delay:500ms;
+  transform:scale(.8);
+  animation-speed:4s;
+}
+
+.star + .star + .star + .star{
+  top:200%;
+  left:250%;
+  animation-delay:700ms;
+  transform:scale(.4);
+  animation-speed:2s;
+}
+
+.star + .star + .star + .star + .star{
+  top:150%;
+  left:330%;
+  animation-delay:200ms;
+  transform:scale(.5);
+}
+.star + .star + .star + .star + .star + .star{
+  top:-380%;
+  left:-300%;
+  animation-delay:2000ms;
+  transform:scale(.7);
+  animation-speed:6s;
+}
+
+.star + .star + .star + .star + .star + .star + .star{
+  top:400%;
+  left:200%;
+  animation-delay:3000ms;
+  transform:scale(.3);
+}
+
+.star + .star + .star + .star + .star + .star + .star + .star{
+  top:500%;
+  left:180%;
+  animation-delay:400ms;
+  transform:scale(1.2);
+
+}
+
+@keyframes blackhole{
+  95%{
+    opacity:1;
+  }
+  to{
+    top:50%;
+    left:50%;
+  opacity:0;
+  }
+}
+
+body {
+  background-image: radial-gradient(circle, rgba(0, 0, 5, 1), rgba(98,98,98, 1));
+  overflow: hidden;
+}
+.planet{
+  position:absolute;
+  top:50%;
+  left:50%;
+  background: black;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  animation: expand 7s linear;
+  background: radial-gradient(circle at 100px 100px, #ffffff, #000);
+}
+@keyframes expand{
+  from{ height:300px;
+        width:300px;
+        border-radius:50%;
+        background: radial-gradient(circle at 100px 100px, #ffffff, #000);
+  }
+  to{ height:0px;
+      width:0px;
+      border-radius:50%;
+      background: radial-gradient(circle at 100px 100px, #ffffff, #000);
+  }
+  }
+
+</style>
+<script>
+  setTimeout(function() {
+    window.close();
+  }, 6000);
+
+  setTimeout(function() {
+    if (Math.random() > 0.3) { // coin flip
+      window.open('superflash4.html');
+    }
+  }, 2000);
+</script>
+<body>
+  <div class="planet"></div>
+  <div class="star"></div>
+       <div class="star"></div>
+       <div class="star"></div>
+       <div class="star"></div>
+       <div class="star"></div>
+       <div class="star"></div>
+       <div class="star"></div>
+       <div class="star"></div>
+
+</body>
+
+<audio style="display:none" controls autoplay  >
+  <source src ="assets/flash4.mp3" type="audio/mpeg">
+</audio>
+</html>

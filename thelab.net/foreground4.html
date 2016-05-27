@@ -1,0 +1,60 @@
+<html>
+<head>
+  <title>Foreground 4</title>
+</head>
+<style>
+
+body {
+  background-image: radial-gradient(circle, rgba(0, 0, 5, 1), rgba(0,0,5, 1));
+  overflow: hidden;
+}
+
+.space{
+    position:abolute;
+    top:0;
+    left:0;
+    background-image:
+   radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 10px),
+   radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 10px),
+   radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 10px),
+   radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 10px);
+   background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+   background-position: 0 0, 40px 30px, 130px 270px, 70px 100px;
+   animation: spin 30s linear infinite;
+   width: 200%;
+   height: 200%;
+   margin: -100% 0 0 -50%;
+   opacity: 1;
+ }
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+</style>
+<script>
+  setTimeout(function() {
+    window.close();
+  }, 12000);
+
+  setTimeout(function() {
+    if (Math.random() > 0.4) { // coin flip
+      window.open('flash4.html');
+    }
+  }, 6000);
+
+</script>
+
+<audio style="display:none" controls autoplay  >
+  <source src ="assets/foreground4.mp3" type="audio/mpeg">
+</audio>
+
+<body>
+  <div class="space"></div>
+
+
+
+</body>
+</html>

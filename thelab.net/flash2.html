@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>Flash 2</title>
+</head>
+
+<style>
+.square1{
+  position:absolute;
+  top: 25%;
+  left:13%;
+  width:100px;
+  height:100px;
+  background: #ffffff;
+  animation: spin 3s linear infinite;
+}
+.triangle{
+  position:absolute;
+  top: 72%;
+  left:43%;
+  width:0;
+  height:0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-top: 173.2px solid #ffffff;
+  animation: blink 4s linear infinite;
+
+}
+@keyframes blink {
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
+}
+
+.square2{
+position:absolute;
+top: 25%;
+left:81%;
+width:100px;
+height:100px;
+background: #ffffff;
+animation: spin 3s linear infinite;
+}
+
+@keyframes spin{
+    from {
+      opacity:0.1;
+      transform: rotate(0deg) scale(1) ;
+    }
+    to {
+      opacity:1.0;
+      transform: rotate(360deg) scale(2) ;
+    }
+  }
+</style>
+
+<body background="assets/wave.gif">
+
+<div class="square1"></div>
+<div class="triangle"></div>
+<div class="square2"></div>
+
+</body>
+<script>
+
+  setTimeout(function(){
+    window.close();
+  }, 6000);
+
+  setTimeout(function() {
+    if (Math.random() > 0.3) { // coin flip
+      window.open('superflash2.html');
+    }
+  }, 2000);
+</script>
+
+
+<audio style="display:none" controls autoplay loop >
+  <source src ="assets/flash2.mp3" type="audio/mpeg">
+</audio>
+
+</html>

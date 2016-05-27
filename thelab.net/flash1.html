@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>Flash 1</title>
+</head>
+
+<style>
+.bebas{
+  font-family: bebas kai;
+  font-size: 300px;
+  color: white;
+  position: absolute;
+  animation: backandforth  7s linear;
+  animation-iteration-count:infinite;
+  overflow: hidden;
+}
+@keyframes backandforth {0%{left:0;}  50%{left:100%;} 100%{left:0;}}
+
+.bebas2{
+  font-family: bebas kai;
+  font-size: 300px;
+  color: white;
+  position: absolute;
+  top:34%;
+  left:24%;
+  animation: blink  0.1s linear;
+  animation-iteration-count:infinite;
+  overflow: hidden;
+
+}
+@keyframes blink {
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
+}
+
+.bebas3{
+  font-family: bebas kai;
+  font-size: 300px;
+  color: white;
+  position: absolute;
+  top:67%;
+  animation: backandforth2  6s linear;
+  animation-iteration-count:infinite;
+  overflow: hidden;
+}
+@keyframes backandforth2 {0%{right:0;} 50%{right:100%;} 100%{right:0;}}
+</style>
+
+<body background="assets/type.gif">
+<div class="bebas">979.74.002.1</div>
+<div class="bebas2">"2.718"</div>
+<div class="bebas3"> 40.7354188!</div>
+
+</body>
+<script>
+  setTimeout(function(){
+    window.close();
+  }, 6000);
+
+  setTimeout(function() {
+    if (Math.random() > 0.3) { // coin flip
+      window.open('superflash1.html');
+    }
+  }, 2000);
+</script>
+
+<audio style="display:none" controls autoplay loop >
+  <source src ="assets/flash1.mp3" type="audio/mpeg">
+</audio>
+</html>

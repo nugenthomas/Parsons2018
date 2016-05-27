@@ -1,0 +1,629 @@
+<html>
+<head>
+<title>Background</title>
+</head>
+
+<style>
+ body{
+ animation: changegradient 6s linear infinite;
+ }
+@keyframes changegradient {
+   0%{
+     background: radial-gradient( #141313 , #666565);
+     opacity: 0.1;
+   }
+   50%{
+     background: radial-gradient(   #666565,#141313);
+     opacity: 1;
+   }
+   100%{
+     background: radial-gradient( #141313 , #666565);
+     opacity: 0.1;
+   }
+}
+
+.container {
+  width: 480px;
+  height: 480px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -240px;
+  margin-left: -240px;
+}
+.container .ring {
+  margin: 0 auto;
+  position: absolute;
+  text-align: center;
+}
+
+.ring.sp-1 {
+  border: 2px solid black;
+  border-color: #00000;
+  left: 8px;
+  top: 8px;
+  width: 464px;
+  height: 464px;
+  border-radius: 162.4px;
+  animation: spin-7 2.5s linear;
+  animation-delay: 3.02083s;
+  animation-iteration-count: infinite;
+}
+@keyframes spin-2 {
+  0% {
+    border-color: #eeeeee;
+    transform: rotate(0deg);
+  }
+  25% {
+    border-color: #000000;
+    transform: rotate(-45deg);
+  }
+  75% {
+    border-color: #000000;
+    transform: rotate(-135deg);
+  }
+  100% {
+    border-color: #eeeeee;
+    transform: rotate(-180deg);
+  }
+}
+.ring.sp-2 {
+  border: 2px solid black;
+  border-color: #eeeeee;
+  left: 16px;
+  top: 16px;
+  width: 448px;
+  height: 448px;
+  border-radius: 156.8px;
+  animation: spin-2 2.5s linear;
+  animation-delay: 2.91667s;
+  animation-iteration-count: infinite;
+}
+
+
+.ring.sp-3 {
+  border: 2px solid black;
+  border-color: #e6e6e6;
+  left: 24px;
+  top: 24px;
+  width: 432px;
+  height: 432px;
+  border-radius: 151.2px;
+  animation: spin-7 2.5s linear;
+  animation-delay: 2.8125s;
+  animation-iteration-count: infinite;
+}
+
+
+.ring.sp-4 {
+  border: 2px solid black;
+  border-color: #dddddd;
+  left: 32px;
+  top: 32px;
+  width: 416px;
+  height: 416px;
+  border-radius: 145.6px;
+  animation: spin-2 2.5s linear;
+  animation-delay: 2.70833s;
+  animation-iteration-count: infinite;
+}
+
+.ring.sp-5 {
+  border: 2px solid black;
+  border-color: #d5d5d5;
+  left: 40px;
+  top: 40px;
+  width: 400px;
+  height: 400px;
+  border-radius: 140px;
+  animation: spin-7 2.5s linear;
+  animation-delay: 2.60417s;
+  animation-iteration-count: infinite;
+}
+
+.ring.sp-6 {
+  border: 2px solid black;
+  border-color: #cccccc;
+  left: 48px;
+  top: 48px;
+  width: 384px;
+  height: 384px;
+  border-radius: 134.4px;
+  animation: spin-2 2.5s linear;
+  animation-delay: 2.5s;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes spin-7 {
+  0% {
+    border-color: #c4c4c4;
+    transform: rotate(0deg);
+  }
+  25% {
+    border-color: #000000;
+    transform: rotate(45deg);
+  }
+  75% {
+    border-color: #000000;
+    transform: rotate(135deg);
+  }
+  100% {
+    border-color: #c4c4c4;
+    transform: rotate(180deg);
+  }
+}
+
+.ring.sp-7 {
+  border: 2px solid black;
+  border-color: #eeeeee;
+  left: 56px;
+  top: 56px;
+  width: 368px;
+  height: 368px;
+  border-radius: 128.8px;
+  animation: spin-7 2.5s linear;
+  animation-delay: 2.39583s;
+  animation-iteration-count: infinite;
+}
+.ring.sp-8 {
+  border: 2px solid black;
+  border-color: #000000;
+  left: 64px;
+  top: 64px;
+  width: 352px;
+  height: 352px;
+  border-radius: 123.2px;
+  animation: spin-2 2.5s linear;
+  animation-delay: 2.29167s;
+  animation-iteration-count: infinite;
+}
+.ring.sp-9 {
+  border: 2px solid black;
+  border-color: #b3b3b3;
+  left: 72px;
+  top: 72px;
+  width: 336px;
+  height: 336px;
+  border-radius: 117.6px;
+  animation: spin-7 2.5s linear;
+  animation-delay: 2.1875s;
+  animation-iteration-count: infinite;
+}
+
+.ring.sp-10 {
+  border: 2px solid black;
+  border-color: #aaaaaa;
+  left: 80px;
+  top: 80px;
+  width: 320px;
+  height: 320px;
+  border-radius: 112px;
+
+  animation: spin-2 2.5s linear;
+  animation-delay: 2.08333s;
+  animation-iteration-count: infinite;
+}
+
+.ring.sp-11 {
+  border: 2px solid black;
+  border-color: #a2a2a2;
+  left: 88px;
+  top: 88px;
+  width: 304px;
+  height: 304px;
+  border-radius: 106.4px;
+  animation: spin-7 2.5s linear;
+  animation-delay: 1.97917s;
+  animation-iteration-count: infinite;
+}
+
+.ring.sp-12 {
+  border: 2px solid black;
+  border-color: #999999;
+  left: 96px;
+  top: 96px;
+  width: 288px;
+  height: 288px;
+  border-radius: 100.8px;
+  animation: spin-2 2.5s linear;
+  animation-delay: 1.875s;
+  animation-iteration-count: infinite;
+}
+.ring.sp-13 {
+  border: 2px solid black;
+  border-color: #919191;
+  left: 104px;
+  top: 104px;
+  width: 272px;
+  height: 272px;
+  border-radius: 95.2px;
+  animation: spin-7 2.5s linear;
+  animation-delay: 1.77083s;
+  animation-iteration-count: infinite;
+}
+
+.ring.sp-14 {
+  border: 2px solid black;
+  border-color: #888888;
+  left: 112px;
+  top: 112px;
+  width: 256px;
+  height: 256px;
+  border-radius: 89.6px;
+  animation: spin-2 2.5s linear;
+  animation-delay: 1.66667s;
+  animation-iteration-count: infinite;
+}
+
+.ring.sp-15 {
+  border: 2px solid black;
+  border-color: gray;
+  left: 120px;
+  top: 120px;
+  width: 240px;
+  height: 240px;
+  border-radius: 84px;
+  animation: spin-7 2.5s linear;
+  animation-delay: 1.5625s;
+  animation-iteration-count: infinite;
+}
+
+.ring.sp-16 {
+  border: 2px solid black;
+  border-color: #777777;
+  left: 128px;
+  top: 128px;
+  width: 224px;
+  height: 224px;
+  border-radius: 78.4px;
+  animation: spin-2 2.5s linear;
+  animation-delay: 1.45833s;
+  animation-iteration-count: infinite;
+}
+
+.ring.sp-17 {
+  border: 2px solid black;
+  border-color: #6f6f6f;
+  left: 136px;
+  top: 136px;
+  width: 208px;
+  height: 208px;
+  border-radius: 72.8px;
+  animation: spin-7 2.5s linear;
+  animation-delay: 1.35417s;
+  animation-iteration-count: infinite;
+}
+
+.ring.sp-18 {
+  border: 2px solid black;
+  border-color: #666666;
+  left: 144px;
+  top: 144px;
+  width: 192px;
+  height: 192px;
+  border-radius: 67.2px;
+  animation: spin-2 2.5s linear;
+  animation-delay: 1.25s;
+  animation-iteration-count: infinite;
+}
+
+.ring.sp-19 {
+  border: 2px solid black;
+  border-color: #5e5e5e;
+  left: 152px;
+  top: 152px;
+  width: 176px;
+  height: 176px;
+  border-radius: 61.6px;
+  animation: spin-2 2.5s linear;
+  animation-delay: 1.14583s;
+  animation-iteration-count: infinite;
+}
+
+.ring.sp-20 {
+  border: 2px solid black;
+  border-color: #555555;
+  left: 160px;
+  top: 160px;
+  width: 160px;
+  height: 160px;
+  border-radius: 56px;
+  animation: spin-7 2.5s linear;
+  animation-delay: 1.04167s;
+  animation-iteration-count: infinite;
+}
+
+.ring.sp-21 {
+  border: 2px solid black;
+  border-color: #4d4d4d;
+  left: 168px;
+  top: 168px;
+  width: 144px;
+  height: 144px;
+  border-radius: 50.4px;
+  animation: spin-2 2.5s linear;
+  animation-delay: 0.9375s;
+  animation-iteration-count: infinite;
+}
+
+.ring.sp-22 {
+  border: 2px solid black;
+  border-color: #444444;
+  left: 176px;
+  top: 176px;
+  width: 128px;
+  height: 128px;
+  border-radius: 44.8px;
+  animation: spin-7 2.5s linear;
+  animation-delay: 0.83333s;
+  animation-iteration-count: infinite;
+}
+
+.ring.sp-23 {
+  border: 2px solid black;
+  border-color: #3c3c3c;
+  left: 184px;
+  top: 184px;
+  width: 112px;
+  height: 112px;
+  border-radius: 39.2px;
+  animation: spin-2 2.5s linear;
+  animation-delay: 0.72917s;
+  animation-iteration-count: infinite;
+}
+
+.ring.sp-24 {
+  border: 2px solid black;
+  border-color: #333333;
+  left: 192px;
+  top: 192px;
+  width: 96px;
+  height: 96px;
+  border-radius: 33.6px;
+  animation: spin-7 2.5s linear;
+  animation-delay: 0.625s;
+  animation-iteration-count: infinite;
+}
+
+.ring.sp-25 {
+  border: 2px solid black;
+  border-color: #2b2b2b;
+  left: 200px;
+  top: 200px;
+  width: 80px;
+  height: 80px;
+  border-radius: 28px;
+  animation: spin-2 2.5s linear;
+  animation-delay: 0.52083s;
+  animation-iteration-count: infinite;
+}
+
+.ring.sp-26 {
+  border: 2px solid black;
+  border-color: #222222;
+  left: 208px;
+  top: 208px;
+  width: 64px;
+  height: 64px;
+  border-radius: 22.4px;
+  animation: spin-7 2.5s linear;
+  animation-delay: 0.41667s;
+  animation-iteration-count: infinite;
+}
+
+
+.ring.sp-27 {
+  border: 2px solid black;
+  border-color: #1a1a1a;
+  left: 216px;
+  top: 216px;
+  width: 48px;
+  height: 48px;
+  border-radius: 16.8px;
+  animation: spin-2 2.5s linear;
+  animation-delay: 0.3125s;
+  animation-iteration-count: infinite;
+}
+.ring.sp-28 {
+  border: 2px solid black;
+  border-color: #111111;
+  left: 224px;
+  top: 224px;
+  width: 32px;
+  height: 32px;
+  border-radius: 11.2px;
+  animation: spin-7 2.5s linear;
+  animation-delay: 0.20833s;
+  animation-iteration-count: infinite;
+}
+
+.ring.sp-29 {
+  border: 2px solid black;
+  border-color: #090909;
+  left: 232px;
+  top: 232px;
+  width: 16px;
+  height: 16px;
+  border-radius: 40%;
+  animation: spin-2 2.5s linear;
+  animation-delay: 0.10417s;
+  animation-iteration-count: infinite;
+}
+
+.ring.sp-30 {
+  border: 2px solid black;
+  border-color: black;
+  left: 240px;
+  top: 240px;
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  animation: spin-7 2.5s linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+/*bigger*/
+
+.ring.sp-31 {
+  border: 2px solid black;
+  border-color: #f7f7f7;
+  left: 0px;
+  top: 0px;
+  width: 480px;
+  height: 480px;
+  border-radius: 168px;
+  animation: spin-7 2.5s linear;
+  animation-delay: 3.02193s;
+  animation-iteration-count: infinite;
+}
+.ring.sp-32 {
+  border: 2px solid black;
+  border-color: #f7f7f7;
+  left: -8px;
+  top: -8px;
+  width: 496px;
+  height: 496px;
+  border-radius: 173.6px;
+  animation: spin-2 2.5s linear;
+  animation-delay: 3.02283s;
+  animation-iteration-count: infinite;
+}
+.ring.sp-33 {
+  border: 2px solid black;
+  border-color: #f7f7f7;
+  left: -16px;
+  top: -16px;
+  width: 512px;
+  height: 512px;
+  border-radius: 179.2px;
+  animation: spin-7 2.5s linear;
+  animation-delay: 3.02383s;
+  animation-iteration-count: infinite;
+}
+.ring.sp-34 {
+  border: 2px solid black;
+  border-color: #f7f7f7;
+  left: -24px;
+  top: -24px;
+  width: 528px;
+  height: 528px;
+  border-radius: 184.8px;
+  animation: spin-2 2.5s linear;
+  animation-delay: 3.02683s;
+  animation-iteration-count: infinite;
+}
+.ring.sp-35 {
+  border: 2px solid black;
+  border-color: #f7f7f7;
+  left: -32px;
+  top: -32px;
+  width: 544px;
+  height: 544px;
+  border-radius: 190.4px;
+  animation: spin-7 2.5s linear;
+  animation-delay: 3.02883s;
+  animation-iteration-count: infinite;
+}
+.ring.sp-36 {
+  border: 2px solid black;
+  border-color: #f7f7f7;
+  left: -40px;
+  top: -40px;
+  width: 560px;
+  height: 560px;
+  border-radius: 196px;
+  animation: spin-2 2.5s linear;
+  animation-delay: 3.02983s;
+  animation-iteration-count: infinite;
+}
+.ring.sp-37{
+  border: 2px solid black;
+  border-color: #f7f7f7;
+  left: -48px;
+  top: -48px;
+  width: 576px;
+  height: 576px;
+  border-radius: 201.6px;
+  animation: spin-7 2.5s linear;
+  animation-delay: 3.03093s;
+  animation-iteration-count: infinite;
+}
+
+</style>
+
+<script>
+  var next_foreground = 'foreground1.html';
+
+  setInterval(function() {
+    window.open(next_foreground);
+    // TODO: Change next_foreground to something else?
+
+    var next_fg_num = 1+ Math.round(Math.random() * 3);
+    next_foreground = "foreground" + next_fg_num + ".html";
+    console.log(next_foreground);
+
+  }, 12000);
+
+
+  // Loop incrementally over the foregrounds.
+  // next_fg_num = next_fg_num + 1;
+  // if(next_fg_num > 4) {
+  //  next_fg_num = 1;
+  // }
+
+
+</script>
+
+<audio style="display:none" controls autoplay loop >
+  <source src ="assets/background.mp3" type="audio/mpeg">
+</audio>
+
+
+<body>
+  <div class="container">
+    <div class="ring sp-1"></div>
+ <div class="ring sp-2"></div>
+ <div class="ring sp-3"></div>
+ <div class="ring sp-4"></div>
+ <div class="ring sp-5"></div>
+ <div class="ring sp-6"></div>
+ <div class="ring sp-7"></div>
+ <div class="ring sp-8"></div>
+ <div class="ring sp-9"></div>
+ <div class="ring sp-10"></div>
+ <div class="ring sp-11"></div>
+ <div class="ring sp-12"></div>
+ <div class="ring sp-13"></div>
+ <div class="ring sp-14"></div>
+ <div class="ring sp-15"></div>
+ <div class="ring sp-16"></div>
+ <div class="ring sp-17"></div>
+ <div class="ring sp-18"></div>
+ <div class="ring sp-19"></div>
+ <div class="ring sp-20"></div>
+ <div class="ring sp-21"></div>
+ <div class="ring sp-22"></div>
+ <div class="ring sp-23"></div>
+ <div class="ring sp-24"></div>
+ <div class="ring sp-25"></div>
+ <div class="ring sp-26"></div>
+ <div class="ring sp-27"></div>
+ <div class="ring sp-28"></div>
+ <div class="ring sp-29"></div>
+ <div class="ring sp-30"></div>
+ <div class="ring sp-31"></div>
+ <div class="ring sp-32"></div>
+ <div class="ring sp-33"></div>
+ <div class="ring sp-34"></div>
+ <div class="ring sp-35"></div>
+ <div class="ring sp-36"></div>
+ <div class="ring sp-37"></div>
+ <div class="ring sp-38"></div>
+ <div class="ring sp-39"></div>
+ <div class="ring sp-40"></div>
+
+  </div>
+</body>
+</html>

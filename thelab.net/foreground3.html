@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Foreground 3</title>
+</head>
+
+<style>
+
+
+.waves {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url('assets/dots2.gif');
+}
+
+
+
+
+</style>
+
+
+<script>
+  setTimeout(function() {
+    window.close();
+  }, 12000);
+
+  setTimeout(function() {
+    if (Math.random() > 0.4) { // coin fcircle1p
+      window.open('flash3.html');
+    }
+  }, 6000);
+</script>
+
+<body>
+    <div class="waves"></div>
+
+</body>
+
+<audio style="display:none" controls autoplay  >
+  <source src ="assets/foreground3.mp3" type="audio/mpeg">
+</audio>
+
+
+</html>
