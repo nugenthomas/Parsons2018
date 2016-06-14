@@ -1,0 +1,892 @@
+<html>
+  <head>
+    <meta charset="uft-8">
+
+    <title> Peaked.</title>
+    <link rel="stylesheet" type="text/css" href ="style.css">
+    <style>
+
+  .movingpacman{
+    top:260px;
+    left:100px;
+    width:10;
+    position: fixed;
+    margin-left:10px;
+    }
+
+    .pacman {
+    margin: 40px 10px;
+    }
+
+  .pacman-top {
+    background-color: yellow;
+    height: 100px;
+    width: 200px;
+    border-radius: 100px 100px 0 0;
+    animation: spin1 0.5s infinite linear;
+  }
+
+  @keyframes spin1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-35deg);
+  }
+  }
+
+  .pacman-bottom {
+    background-color: yellow;
+    height: 100px;
+    width: 200px;
+    border-radius: 0 0 100px 100px;
+    animation: spin2 0.5s infinite linear;
+  }
+  @keyframes spin2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(35deg);
+  }
+  }
+
+    .food {
+    margin-top: -185px;
+    margin-left:15px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    animation: eat 1s linear 0s infinite;
+  }
+    @keyframes eat {
+    0% { box-shadow:
+    100px 65px 0 0 white,
+    300px 65px 0 0 white,
+    500px 65px 0 0 white,
+    700px 65px 0 0 white,
+    900px 65px 0 0 white,
+    1100px 65px 0 0 white,
+    1300px 65px 0 0 white;}
+
+    100% { box-shadow:
+    0px 65px 0 0 white,
+    100px 65px 0 0 white,
+    300px 65px 0 0 white,
+    500px 65px 0 0 white,
+    700px 65px 0 0 white,
+    900px 65px 0 0 white,
+    1100px 65px 0 0 white;}
+  }
+
+  .blank{
+    background-color:black;
+    width: 12000px;
+    height: 100%;
+  }
+  /*TOP*/
+  .square1{
+  position:absolute;
+  top: 10%;
+  left:50%;
+  width:60px;
+  height:60px;
+  background: #fc3b10;
+  animation: spin 2s linear infinite;
+  animation-name: normalspin;
+  }
+
+
+    .square4{
+    position:absolute;
+    top: 10%;
+    left:110%;
+    width:60px;
+    height:60px;
+    background: #fdc2d4;
+    animation: spin 2s linear infinite;
+    animation-name: normalspin;
+    }
+
+
+    .triangle5{
+    position:absolute;
+    top: 10%;
+    left:150%;
+    width:0px;
+    height:0px;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 70px solid #ffbe56;
+    animation: spin 2s linear infinite;
+    animation-name: normalspin;
+    }
+
+    .triangle10{
+    position:absolute;
+    top: 10%;
+    left:180%;
+    width:0px;
+    height:0px;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 70px solid #4ADFCB;
+    animation: spin 0.8s linear infinite;
+    animation-name: normalspin;
+    }
+
+    .triangle11{
+    position:absolute;
+    top: 10%;
+    left:210%;
+    width:0px;
+    height:0px;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 70px solid #FDC2D4;
+    animation: spin 0.5s linear infinite;
+    animation-name: normalspin;
+    }
+
+    .triangle12{
+    position:absolute;
+    top: 10%;
+    left:240%;
+    width:0px;
+    height:0px;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 70px solid #4ADFCB;
+    animation: spin 0.3s linear infinite;
+    animation-name: normalspin;
+    }
+
+    .triangle13{
+    position:absolute;
+    top: 10%;
+    left:270%;
+    width:0px;
+    height:0px;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 70px solid #FC3B10;
+    animation: spin 0.1s linear infinite;
+    animation-name: normalspin;
+    }
+
+    .triangle14{
+    position:absolute;
+    top: 10%;
+    left:290%;
+    width:60px;
+    height:60px;
+    background: #FFBE56;
+    animation: spin 0.1s linear infinite;
+    animation-name: normalspin;
+    }
+
+    .triangle21{
+    position:absolute;
+    top: 10%;
+    left:320%;
+    width:0px;
+    height:0px;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 70px solid #FC3B10;
+    animation: spin 0.5s linear infinite;
+    animation-name: crazyspinning;
+    }
+
+    .triangle22{
+    position:absolute;
+    top: 10%;
+    left:350%;
+    width:0px;
+    height:0px;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 70px solid #FFBE56;
+    animation: spin 0.1s linear infinite;
+    animation-name: crazyspinning;
+    }
+
+    .triangle23{
+    position:absolute;
+    top: 10%;
+    left:380%;
+    width:60px;
+    height:60px;
+    background:#fec58e;
+    animation: spin 0.1s linear infinite;
+    animation-name: ghostspinning;
+    }
+    /*layertripping*/
+
+    .triangle23a{
+    position:absolute;
+    top: 10%;
+    left:410%;
+    width:70px;
+    height:70px;
+    border-radius: 50%;
+    background:#fec58e;
+    animation: spin 0.5s linear infinite;
+    animation-name: ghostdeadspinning;
+    }
+
+    .triangle24{
+    position:absolute;
+    top: 10%;
+    left:410%;
+    width:60px;
+    height:60px;
+    background:#fec58e;
+    animation: spin 0.1s linear infinite;
+    animation-name: ghostspinning;
+    }
+
+    .triangle25{
+    position:absolute;
+    top: 10%;
+    left:410%;
+    width:60px;
+    height:60px;
+    background:#fec58e;
+    animation: spin 0.5s linear infinite;
+    animation-name: ghostspinning;
+    }
+
+    .triangle26{
+    position:absolute;
+    top: 10%;
+    left:410%;
+    width:60px;
+    height:60px;
+    background:#fec58e;
+    animation: spin 1s linear infinite;
+    animation-name: ghostspinning;
+    }
+
+    .triangle27{
+    position:absolute;
+    top: 10%;
+    left:410%;
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    background:#fec58e;
+    animation: spin 1s linear infinite;
+    animation-name: ghostspinning;
+    }
+
+
+    /*tripping layer ends*/
+
+
+
+    .triangle28{
+    position:absolute;
+    top: 10%;
+    left:440%;
+    width:60px;
+    height:60px;
+    background: #fec58e;
+    animation: spin 3s linear infinite;
+    animation-name: ghostdeadspinning;
+    }
+
+
+    .triangle29{
+    position:absolute;
+    top: 10%;
+    left:440%;
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    background: #fec58e;
+    animation: spin 1s linear infinite;
+    animation-name: ghostdeadspinning;
+    }
+
+    .triangle35{
+    position:absolute;
+    top: 10%;
+    left:440%;
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    background: #fec58e;
+    animation: spin 0.5s linear infinite;
+    animation-name: ghostdeadspinning;
+    }
+
+    .triangle30{
+    position:absolute;
+    top: 10%;
+    left:470%;
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    background: #fec58e;
+    animation: spin 1s linear infinite;
+    animation-name: ghostdeadspinning;
+    }
+
+    .triangle31{
+    position:absolute;
+    top: 10%;
+    left:470%;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background: #fec58e;
+    animation: spin 0.5s linear infinite;
+    animation-name: normalagain;
+    }
+
+    .triangle36{
+    position:absolute;
+    top: 10%;
+    left:500%;
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    background: #fec58e;
+    animation: spin 1s linear infinite;
+    animation-name: normalagain;
+    }
+    .triangle37{
+    position:absolute;
+    top: 10%;
+    left:520%;
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background: #fec58e;
+    animation: spin 2s linear infinite;
+    animation-name: normalagain;
+    }
+    .triangle38{
+    position:absolute;
+    top: 10%;
+    left:540%;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background: #fec58e;
+    animation: spin 2.4s linear infinite;
+    animation-name: normalagain;
+    }
+    .triangle39{
+    position:absolute;
+    top: 10%;
+    left:560%;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background: #fec58e;
+    animation: spin 2.9s linear infinite;
+    animation-name: normalagain;
+    }
+    .triangle40{
+    position:absolute;
+    top: 10%;
+    left:580%;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background: #FDC2D4;
+    animation: spin 1.5s linear infinite;
+    animation-name: backtosquare;
+    }
+    .triangle41{
+    position:absolute;
+    top: 10%;
+    left:600%;
+    width:60px;
+    height:60px;
+    background: #FDC2D4;
+    animation: spin 1s linear infinite;
+    animation-name: normalspin;
+    }
+    .triangle42{
+    position:absolute;
+    top: 10%;
+    left:620%;
+    width:60px;
+    height:60px;
+    background: #4ADFCB;
+    animation: spin 1s linear infinite;
+    animation-name:normalspin;
+    }
+    .triangle43{
+    position:absolute;
+    top: 10%;
+    left:640%;
+    width:60px;
+    height:60px;
+    background: #FFBE56;
+    animation: spin 1s linear infinite;
+    animation-name:normalspin;
+    }
+    .triangle44{
+    position:absolute;
+    top: 10%;
+    left:660%;
+    width:60px;
+    height:60px;
+    background: #FC3B10;
+    animation: spin 1s linear infinite;
+    animation-name:normalspin;
+    }
+
+
+
+
+
+    .gameover{
+    position:absolute;
+    top: 10%;
+    left:740%;
+    text-decoration: none;
+    text-align: center;
+    font-size:90px;
+    font-family: "8BIT WONDER";
+    color:white;
+    white-space: nowrap;
+    transition: all 1s;
+    animation: neonglow 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes neonglow {
+  from {
+    text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de;
+  }
+  to {
+    text-shadow:  0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de;
+  }
+  }
+
+    /*BOTTOM*/
+    .triangle2{
+    position:absolute;
+    top: 80%;
+    left:20%;
+    width:0px;
+    height:0px;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 70px solid #4adfcb;
+    animation: spin 2s linear infinite;
+    animation-name: normalspin;
+    }
+
+
+      .triangle3{
+      position:absolute;
+      top: 80%;
+      left:80%;
+      width:0px;
+      height:0px;
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      border-top: 70px solid #ffbe56;
+      animation: spin 2s linear infinite;
+      animation-name: normalspin;
+      }
+
+      .triangle6{
+      position:absolute;
+      top: 80%;
+      left:130%;
+      width:60px;
+      height:60px;
+      background: #4adfcb;
+      animation: spin 2s linear infinite;
+      animation-name: normalspin;
+      }
+
+      .triangle7{
+      position:absolute;
+      top: 80%;
+      left:170%;
+      width:60px;
+      height:60px;
+      background: #FDC2D4;
+      animation: spin 1s linear infinite;
+      animation-name: normalspin;
+      }
+
+      .triangle8{
+      position:absolute;
+      top: 80%;
+      left:200%;
+      width:60px;
+      height:60px;
+      background: #FC3B10;
+      animation: spin 0.8s linear infinite;
+      animation-name: normalspin;
+      }
+
+      .triangle9{
+      position:absolute;
+      top: 80%;
+      left:230%;
+      width:60px;
+      height:60px;
+      background: #FFBE56;
+      animation: spin 0.5s linear infinite;
+      animation-name: normalspin;
+      }
+
+      .triangle15{
+      position:absolute;
+      top: 80%;
+      left:260%;
+      width:60px;
+      height:60px;
+      background: #FDC2D4;
+      animation: spin 0.1s linear infinite;
+      animation-name: normalspin;
+      }
+
+      .triangle16{
+      position:absolute;
+      top: 80%;
+      left:280%;
+      width:0px;
+      height:0px;
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      border-top: 70px solid #4ADFCB;
+      animation: spin 0.1s linear infinite;
+      animation-name: normalspin;
+      }
+
+      @keyframes normalspin{
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+      .triangle17{
+      position:absolute;
+      top: 80%;
+      left:310%;
+      width:60px;
+      height:60px;
+      background:#FDC2D4;
+      animation: spin 0.5s linear infinite;
+      animation-name: crazyspinning;
+      }
+
+      .triangle18{
+      position:absolute;
+      top: 80%;
+      left:340%;
+      width:60px;
+      height:60px;
+      background: #4ADFCB;
+      animation: spin 0.1s linear infinite;
+      animation-name: crazyspinning;
+      }
+
+      .triangle19{
+      position:absolute;
+      top: 80%;
+      left:370%;
+      width:60px;
+      height:60px;
+      background: #4ADFCB;
+      animation: spin 0.1s linear infinite;
+      animation-name: ghostspinning;
+      }
+
+      /*layertripping*/
+      .triangle19a{
+      position:absolute;
+      top: 80%;
+      left:400%;
+      width:70px;
+      height:70px;
+      border-radius: 50%;
+      background:#fec58e;
+      animation: spin 0.5s linear infinite;
+      animation-name: ghostdeadspinning;
+      }
+
+      .triangle20{
+      position:absolute;
+      top: 80%;
+      left:400%;
+      width:62px;
+      height:62px;
+      background: #4ADFCB;
+      animation: spin 1s linear infinite;
+      animation-name: ghostspinning;
+      }
+
+      .triangle32{
+      position:absolute;
+      top: 80%;
+      left:400%;
+      width:60px;
+      height:60px;
+      background:#fec58e;
+      animation: spin 1s linear infinite;
+      animation-name: ghostspinning;
+      }
+
+      .triangle33{
+      position:absolute;
+      top: 80%;
+      left:400%;
+      width:60px;
+      height:60px;
+      background:#fec58e;
+      animation: spin 0.5s linear infinite;
+      animation-name: ghostspinning;
+      }
+
+      .triangle34{
+      position:absolute;
+      top: 80%;
+      left:400%;
+      width:60px;
+      height:60px;
+      border-radius: 50%;
+      background:#fec58e;
+      animation: spin 0.1s linear infinite;
+      animation-name: ghostspinning;
+      }
+
+      /*tripping layer ends*/
+
+      .triangle45{
+      position:absolute;
+      top: 80%;
+      left:430%;
+      width:60px;
+      height:60px;
+      background: #fec58e;
+      animation: spin 3s linear infinite;
+      animation-name: ghostdeadspinning;
+      }
+
+
+      .triangle46{
+      position:absolute;
+      top: 80%;
+      left:430%;
+      width:60px;
+      height:60px;
+      border-radius: 50%;
+      background: #fec58e;
+      animation: spin 1s linear infinite;
+      animation-name: ghostdeadspinning;
+      }
+
+      .triangle47{
+      position:absolute;
+      top: 80%;
+      left:430%;
+      width:60px;
+      height:60px;
+      border-radius: 50%;
+      background: #fec58e;
+      animation: spin 0.5s linear infinite;
+      animation-name: ghostdeadspinning;
+      }
+
+      .triangle48{
+      position:absolute;
+      top: 80%;
+      left:460%;
+      width:60px;
+      height:60px;
+      border-radius: 50%;
+      background: #fec58e;
+      animation: spin 3s linear infinite;
+      animation-name:glitched;
+      }
+
+      .triangle49{
+      position:absolute;
+      top: 80%;
+      left:460%;
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      background: #fec58e;
+      animation: spin 1s linear infinite;
+      animation-name: glitched;
+      }
+
+
+
+
+
+      @keyframes glitched{
+    0%   {background-color: #0117ff; left:460%; top:80%;}
+    10%   {background-color: #0117ff; left:490%; top:80%;}
+    25%  {background-color: #FC3B10; left:510%; top:80%;}
+    35%  {background-color: #FC3B10; left:540%; top:80%;}
+    50%  {background-color: #4ADFCB; left:570%; top:80%;}
+    65%  {background-color: #4ADFCB; left:600%; top:80%;}
+    75%  {background-color: #FFBE56; left:630%; top:80%;}
+    85%  {background-color: #FFBE56; left:660%; top:80%;}
+
+    100% {background-color: #FDC2D4; left:690%; top:80%;}
+}
+      @keyframes crazyspinning{
+          from {
+            opacity:0;
+            transform: rotate(0deg) scale(1) ;
+          }
+          to {
+            opacity:1;
+            transform: rotate(360deg) scale(2) ;
+          }
+        }
+
+      @keyframes ghostspinning{
+          from{
+            background: #fec58e;
+            opacity:0;
+            transform: rotate(0deg) scale(1) ;
+          }
+          to {
+            background: #0017ff;
+            opacity:1;
+            transform: rotate(360deg) scale(3) ;
+          }
+        }
+
+      @keyframes ghostdeadspinning{
+        from{
+          opacity:1;
+          transform: rotate(0deg) scale(3) ;
+        }
+        to {
+          background: #0017ff;
+          opacity:0;
+          transform: rotate(360deg) scale(1) ;
+        }
+      }
+
+      @keyframes normalagain{
+        from{
+          opacity:0;
+          transform: rotate(0deg) scale(2) ;
+        }
+        to {
+          background: #FDC2D4;
+          opacity:1;
+          transform: rotate(360deg) scale(1) ;
+        }
+      }
+
+      @keyframes backtosquare{
+        from{
+          width:60px;
+          height:60px;
+          border-radius: 50%;
+          opacity:0;
+          transform: rotate(0deg) scale(2) ;
+        }
+        to {
+          width:60px;
+          height:60px;
+          border-radius: 0%;
+          background: #FDC2D4;
+          opacity:1;
+          transform: rotate(360deg) scale(1) ;
+        }
+      }
+
+
+    </style>
+    </head>
+
+
+    <body>
+      <audio style="display:none" autoplay>
+        <source src ="audio/pacman.mp3" type="audio/mpeg">
+      </audio>
+
+        <div class="blank"></div>
+        <div class="animation">
+        <div class="square1"></div>
+        <div class="triangle2"></div>
+        <div class="triangle3"></div>
+        <div class="square4"></div>
+        <div class="triangle5"></div>
+        <div class="triangle6"></div>
+        <div class="triangle7"></div>
+        <div class="triangle8"></div>
+        <div class="triangle9"></div>
+        <div class="triangle10"></div>
+        <div class="triangle11"></div>
+        <div class="triangle12"></div>
+        <div class="triangle13"></div>
+        <div class="triangle14"></div>
+        <div class="triangle15"></div>
+        <div class="triangle16"></div>
+        <div class="triangle17"></div>
+        <div class="triangle18"></div>
+        <div class="triangle19"></div>
+        <div class="triangle19a"></div>
+
+        <div class="triangle20"></div>
+        <div class="triangle21"></div>
+        <div class="triangle22"></div>
+        <div class="triangle23"></div>
+        <div class="triangle23a"></div>
+
+        <div class="triangle24"></div>
+        <div class="triangle25"></div>
+        <div class="triangle26"></div>
+        <div class="triangle27"></div>
+        <div class="triangle28"></div>
+        <div class="triangle29"></div>
+        <div class="triangle30"></div>
+        <div class="triangle31"></div>
+        <div class="triangle32"></div>
+        <div class="triangle33"></div>
+        <div class="triangle34"></div>
+        <div class="triangle35"></div>
+        <div class="triangle36"></div>
+        <div class="triangle37"></div>
+        <div class="triangle38"></div>
+        <div class="triangle39"></div>
+        <div class="triangle40"></div>
+        <div class="triangle41"></div>
+        <div class="triangle42"></div>
+        <div class="triangle43"></div>
+        <div class="triangle44"></div>
+        <div class="triangle45"></div>
+        <div class="triangle46"></div>
+        <div class="triangle47"></div>
+        <div class="triangle48"></div>
+        <div class="triangle59"></div>
+        <div class="triangle50"></div>
+        <a href="https://www.erowid.org/chemicals/lsd/lsd.shtml"><div class="gameover">
+        GAME OVER</div></a>
+        </div>
+
+
+
+
+        <div class="movingpacman">
+        <div class="pacman"></div>
+        <div class="pacman-top"></div>
+        <div class="pacman-bottom"></div>
+        <div class="food"></div>
+        </div>
+
+    </body>
+</html>

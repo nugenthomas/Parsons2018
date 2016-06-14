@@ -1,0 +1,350 @@
+<html>
+  <head>
+    <meta charset="uft-8">
+    <title> Where Is Lucy?</title>
+    <!-- TODO: Add StyleSheet. -->
+    <style>
+
+
+    .trippinghoffman{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/trippinghoffman.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 4;
+    }
+
+    .lefteyeballs{
+    position: absolute;
+    left:596px;
+    top:270px;
+    width: 50px;
+    height: 50px;
+    border-radius:50%;
+    animation: spin 2s infinite;
+    animation-name: eyeball1;
+    z-index:1;
+    }
+    .righteyeballs{
+    position: absolute;
+    left:900px;
+    top:275px;
+    width: 50px;
+    height: 50px;
+    border-radius:50%;
+    animation: spin 2s infinite;
+    animation-name: eyeball1;
+    z-index:2;
+    }
+    @keyframes eyeball1{
+        from {
+          background: radial-gradient(black);
+          opacity: 0;
+          transform: rotate(0deg) scale(1);
+        }
+        to {
+          background: radial-gradient(red, orange, yellow, green, blue, indigo, violet);
+          opacity: 1;
+          transform: rotate(360deg) scale(4);
+        }
+      }
+
+
+      .whereislucy{
+        position:absolute;
+        top: 85%;
+        left:46.5%;
+        text-align: center;
+        font-size:25px;
+        font-family: "arial";
+        color:red;
+        white-space: nowrap;
+        border-bottom: 3px solid #e83119;
+        transition: border .4s ease-out;
+        }
+      .whereislucy:hover{
+        border-bottom: 350px solid #e83119
+      }
+
+      .spiral{
+      position:absolute;
+      top:68%;
+      left:39%;
+      width:360px;
+      height:240px;
+      border-radius:50%;
+      animation: flash 1s linear infinite;
+      z-index: -100;
+      }
+      @keyframes flash{
+          0%{background:#ff0000;}
+          25%{background:#ff9900;}
+          50%{background:#ffff00;}
+          75%{background:#33ff00;}
+          100%{background:#0099ff;}
+        }
+
+      /*.blank{
+        height:1500px;
+        z-index: -6;
+      }*/
+      .welcome{
+        position:absolute;
+        top: 120%;
+        left:23%;
+        text-align: center;
+        font-size:50px;
+        font-family: "arial";
+        color: lime;
+        animation: colors 1s linear infinite;
+        white-space: nowrap;
+        z-index:-4;
+      }
+      @keyframes colors{
+        0%{text-shadow: 3px 3px :#ff0000;
+          color:#0099ff;}
+        25%{text-shadow: 3px 3px #ff9900;
+          color:#33ff00;}
+        50%{text-shadow: 3px 3px #ffff00;
+        color: #ffff00;}
+        75%{text-shadow : 3px 3px #33ff00;
+        color: #ff9900;}
+        100%{text-shadow: 3px 3px #0099ff;
+        color: #ff0000;}
+      }
+      .nyan{
+        position:absolute;
+        top: 110%;
+        left:23%;
+        width:70%;
+        height:50%;
+        z-index:9;
+        overflow: hidden;
+      }
+      .menucontainer{
+        position: absolute;
+        top:105%;
+        right:5%;
+      }
+
+      .products{
+        position: absolute;
+        top:160%;
+        padding-top: 5%;
+      }
+      .products img{
+        width:350px;
+        height:350px;
+        border-bottom: 1px solid black;
+      }
+
+      .products div {
+
+        border:1px solid black;
+        background-color: #b0b3be;
+        margin:20px;
+        text-align: center;
+        font-family: "arial";
+        display: inline-block;
+      }
+      h4{
+        margin-top: -3px;
+      }
+
+      button{
+        font-family: arial;
+        font-size: 20px;
+        font-weight: bold;
+       -webkit-appearance: none;
+        -webkit-border-radius: 0;
+        background: white;
+        width:70px;
+        height:40px;
+        border-width: 2px;
+        margin-top: -6px;
+        margin-bottom: 15px;
+      }
+      button:hover{
+        cursor: hand;
+-webkit-animation:rainbow 1s infinite;
+-ms-animation:rainbow 1s infinite;
+-o-animation:rainbow 1s infinite;
+animation:rainbow 1s infinite;
+}
+@-webkit-keyframes rainbow {
+0% {background-color: #ff0000;}
+10% {background-color: #ff8000;}
+20% {background-color: #ffff00;}
+30% {background-color: #80ff00;}
+40% {background-color: #00ff00;}
+50% {background-color: #00ff80;}
+60% {background-color: #00ffff;}
+70% {background-color: #0080ff;}
+80% {background-color: #0000ff;}
+90% {background-color: #8000ff;}
+100% {background-color: #ff0080;}
+}
+@-ms-keyframes rainbow {
+0% {background-color: #ff0000;}
+10% {background-color: #ff8000;}
+20% {background-color: #ffff00;}
+30% {background-color: #80ff00;}
+40% {background-color: #00ff00;}
+50% {background-color: #00ff80;}
+60% {background-color: #00ffff;}
+70% {background-color: #0080ff;}
+80% {background-color: #0000ff;}
+90% {background-color: #8000ff;}
+100% {background-color: #ff0080;}
+}
+@-o-keyframes rainbow {
+0% {background-color: #ff0000;}
+10% {background-color: #ff8000;}
+20% {background-color: #ffff00;}
+30% {background-color: #80ff00;}
+40% {background-color: #00ff00;}
+50% {background-color: #00ff80;}
+60% {background-color: #00ffff;}
+70% {background-color: #0080ff;}
+80% {background-color: #0000ff;}
+90% {background-color: #8000ff;}
+100% {background-color: #ff0080;}
+}
+@keyframes rainbow {
+0% {background-color: #ff0000;}
+10% {background-color: #ff8000;}
+20% {background-color: #ffff00;}
+30% {background-color: #80ff00;}
+40% {background-color: #00ff00;}
+50% {background-color: #00ff80;}
+60% {background-color: #00ffff;}
+70% {background-color: #0080ff;}
+80% {background-color: #0000ff;}
+90% {background-color: #8000ff;}
+100% {background-color: #ff0080;}
+}
+
+      #Menu,
+#Menu ul {
+  list-style-image: url('images/beachball.png');
+  list-style-position: inside;
+  list-style-type: circle;
+}
+#Menu {
+    float: right;
+}
+#Menu > li {
+    float: left;
+    padding-bottom: 10px;
+}
+#Menu li a {
+display: block;
+    font-size: 14.5px;
+    font-family: "arial";
+    height: 2em;
+    line-height: 2em;
+    padding: 0 1.5em;
+    text-decoration: none;
+}
+#Menu ul {
+    position: absolute;
+    display: none;
+    z-index: 50;
+}
+#Menu ul li a {
+    width: 20px;
+}
+#Menu li:hover ul {
+    display: block;
+}
+
+
+
+
+
+
+    </style>
+  </head>
+  <!-- <audio style="display:none" controls autoplay>
+    <source src ="audio/nyan.mp3" type="audio/mpeg">
+  </audio> -->
+
+  <body>
+    <div class="lefteyeballs"></div>
+    <div class="righteyeballs"></div>
+    <div class="trippinghoffman">
+
+    <a href="page3.html">
+    <div class="whereislucy">Where Is Lucy?</div></a>
+    </div>
+
+    <div class="spiral"></div>
+  <!-- <div class="blank"></div> -->
+  <div class ="nyan">
+    <img src="images/realnyan.gif" align="center"/>
+  </div>
+    <div class="welcome">Welcome To The Deep, Dark Web!
+
+    </div>
+    <div class="menucontainer">
+      <ul id="Menu">
+   <li><a href="about.html">About</a></li>
+   <li><a href="https://www.erowid.org/chemicals/lsd/lsd_faq.shtml">FAQs</a></li>
+   <li><a href="404.html">(0)My Cart</a></li>
+     </ul>
+   </div>
+
+<div class= "products" align="center">
+   <div>
+     <img src="images/store1.jpg"/>
+     <p> High-Quality Elephant LSD</p>
+     <h4> $39.99 USD - FE </h4>
+     <button type="button" onclick= "location.href = 'bought1.html'">Buy</button>
+
+   </div>
+   <div>
+     <img src="images/store2.jpg"/>
+     <p>Cute Emoji LSD</p>
+     <h4> $23.99 USD - FE </h4>
+     <button type="button" onclick= "location.href = 'bought2.html'">Buy</button>
+   </div>
+   <div>
+     <img src="images/store3.jpg"/>
+     <p>Very Rare Banksy LSD Tab!</p>
+     <h4> $99.99 USD - FE </h4>
+     <button type="button" onclick= "location.href = 'bought3.html'">Buy</button>
+   </div>
+   <div>
+     <img src ="images/store4.jpg"/>
+     <p> Newest Technology! Gel Tab, Intense Trip </p>
+     <h4> $89.99 - FE </h4>
+     <button type="button" onclick= "location.href = 'bought4.html'">Buy</button>
+  </div>
+  <div>
+    <img src ="images/store5.jpg"/>
+    <p> Limited Edition OG Hoffman Tab </p>
+    <h4> $89.99 - FE </h4>
+    <button type="button" onclick= "location.href = 'bought5.html'">Buy</button>
+ </div>
+ <div>
+   <img src ="images/store6.jpg"/>
+   <p> 4mg Happy Spongebob Tab </p>
+   <h4> $39.99 - FE </h4>
+   <button type="button" onclick= "location.href = 'bought6.html'">Buy</button>
+
+</div>
+</div>
+
+
+
+    <!-- <div class="404">
+    <img src="images/cameron.gif" align="center"/></div> -->
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,24 @@
+
+body{
+   font-size: 24px;
+   font-family: verdana, sans-serif;
+   background-repeat:no-repeat;
+   background-size: cover;
+
+}
+
+/*header,footer{
+  padding:0.5em;
+}*/
+
+header{
+  background-color:lime;
+
+}
+
+
+
+footer{
+  background-color: rgba(255, 0, 255, 1);
+  -webkit-filter:blur(1px);
+}

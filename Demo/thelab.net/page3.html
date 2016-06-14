@@ -1,0 +1,115 @@
+<html>
+  <head>
+    <meta charset="uft-8">
+
+    <title> Let's Find Lucy!</title>
+    <link rel="stylesheet" type="text/css" href ="style.css">
+    <style>
+
+
+
+
+/*img {
+  -webkit-box-shadow: 0 0 200px 0 #000000;
+  box-shadow: 0 0 200px 0 #000000;
+  transition: transform .1s;
+}*/
+.page-wrap{
+width:600px;
+margin:15px auto;
+position:relative;
+}
+.sidebar{
+top:10px;
+left:1280px;
+width:190px;
+position:fixed;
+z-index:4;
+}
+.blur img{
+  -webkit-filter: blur(5px);
+  width:40%;
+  height:auto;
+}
+
+
+.blur img:hover {
+  -webkit-filter: blur(0);
+  animation-name: hue;
+  animation-duration: .2s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+
+
+
+/* Standard syntax */
+@keyframes hue {
+  0%   {
+    -webkit-filter: hue-rotate(0deg);
+    transform: scale(1);
+  }
+
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+    transform: scale(1.5);
+  }
+}
+
+    </style>
+    </head>
+
+
+    <body>
+      <audio style="display:none" controls autoplay>
+        <source src ="audio/colour.wav" type="audio/mpeg">
+      </audio>
+
+      <div class="page-wrap">
+      <div class="sidebar"><img src="images/hofman.png"/>
+
+      </div>
+      </div>
+      <div>
+    <center class="blur">
+    <img src="images/blotter.jpg"  class="1" />
+    <img src="images/gdead.jpg" class="2" />
+    <img src="images/elmo.jpg" class="3" />
+    <img src="images/koolaid.jpg"  class="4" />
+    <img src="images/popeye.jpg"  class="5" />
+    <img src="images/chip.jpg" class="6"/>
+    <a href="page4.html">
+    <img src="images/1943.jpg"  class="7" /></a>
+    <img src="images/slipper.jpg"  class="14" />
+    <img src="images/cola.jpg"  class="17" />
+
+    <img src="images/monroe.jpg"  class="16" />
+    <img src="images/hatter.jpg"  class="15" />
+
+
+
+
+      <img src="images/smiley.jpg"  class="13" />
+    <img src="images/mickey.jpg"  class="8" />
+    <img src="images/bee.jpg"  class="9" />
+    <img src="images/eye.jpg"  class="10" />
+        <img src="images/bear.jpg"  class="11" />
+    <img src="images/felix.jpg" class="12" />
+
+
+    </center>
+  </div>
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
