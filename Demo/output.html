@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>SMSD Final</title>
+<meta meta charset="utf-8"
+name='viewport' content='width=device-width, initial scale=1 user-scalable=no'>
+</head>
+
+<style>
+  body{font-family: Helvetica, sans-serif;
+  }
+  .body-part {
+      position: absolute;
+    }
+    #shape1 {
+      position: relative;
+    top: 0px;
+    animation: shape-1 1s linear;
+    animation-iteration-count: infinite;    }
+    @keyframes shape-1{
+      0% {
+       transform: translate3d(50px, 70px, 0px);
+       animation-timing-function: ease-in;
+   }
+   50% {
+       transform: translate3d(50px, 100px, 0px);
+       animation-timing-function: ease-out;
+   }
+   100% {
+       transform: translate3d(50px, 70px, 0px);
+   }
+    }
+    #shape2{
+      width: 200px;
+      top: 210px;
+      left: 200px;
+    }
+
+    #shape3{
+      height: 200px;
+      top: 210px;
+      left: 10px;
+    }
+
+</style>
+<body>
+  <!-- <h2> Please choose a sound and draw a pattern base on the sound you hear</h2>
+    <div><STRONG>Question 1</STRONG>: Please choose a sound.
+  <INPUT TYPE="radio" NAME="q1" VALUE="y">Yes
+  <INPUT TYPE="radio" NAME="q1" VALUE="n">No
+    </div> -->
+
+
+  <!-- <STRONG>Question 2</STRONG>: Please draw according to the sound you hear. -->
+  <!-- <a href="index.html" onclick="save('shape1')";>RESET</a> -->
+
+    <!-- <canvas width="300" height="300" id="paint"
+    style="border:1px solid #000000;"></canvas> -->
+
+    <!-- <script>
+  // STOPS SCROLLING
+    document.ontouchmove = function(event){
+        event.preventDefault();
+    }
+
+    </script> -->
+
+    <img class="body-part" id="shape1">
+    <img class="body-part" id="shape2">
+    <img class="body-part" id="shape3">
+
+    <script>
+
+    var shape1 = document.getElementById('shape1');
+    shape1.src = localStorage.shape1;
+
+    var shape2 = document.getElementById('shape2');
+    shape2.src = localStorage.shape2;
+
+    var shape3 = document.getElementById('shape3');
+    shape3.src = localStorage.shape3;
+
+
+
+      var save = function(name) {
+        localStorage[name] = canvas.toDataURL();
+      };
+      save('shape1');
+
+    </script>
+
+
+</body>
+</html>
