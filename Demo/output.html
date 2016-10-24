@@ -68,7 +68,12 @@ name='viewport' content='width=device-width, initial scale=1 user-scalable=no'>
     <img class="body-part" id="shape2">
     <img class="body-part" id="shape3">
 
+    <!-- <audio style="display:none" controls autoplay>
+      <source src ="Sound1" type="audio/mpeg">
+    </audio> -->
     <script>
+
+    //shape
 
     var shape1 = document.getElementById('shape1');
     shape1.src = localStorage.shape1;
@@ -80,11 +85,41 @@ name='viewport' content='width=device-width, initial scale=1 user-scalable=no'>
     shape3.src = localStorage.shape3;
 
 
+    //sound
+    // var sound1 = document.getElementById('Sound1');
+    // sound1.src  = localStorage.sound1;
+    // sound1.mediaGroup = 'soundGroup';
+    // sound1.play();
 
-      var save = function(name) {
-        localStorage[name] = canvas.toDataURL();
-      };
-      save('shape1');
+    // var snd1  = new audio();
+    // var src1  = document.createElement("source");
+    // src1.type = "audio/mpeg";
+    // src1.src  = "audio/harmony1.mp3";
+    // snd1.appendChild(src1);
+    //
+    // var snd2  = new Audio();
+    // var src2  = document.createElement("source");
+    // src2.type = "audio/mpeg";
+    // src2.src  = "audio/rhythm2.mp3";
+    // snd2.appendChild(src2);
+    //
+    // snd1.play(); snd2.play();
+
+
+    var sound1 = document.getElementById('sound1');
+    new Audio();
+    // var playsound2 = new Audio('sound2');
+    // sound1.mediaGroup = 'soundGroup';
+    // sound2.mediaGroup = 'soundGroup';
+    sound1.play();
+    //  playsound2.play();
+
+
+
+      // var save = function(name) {
+      //   localStorage[name] = canvas.toDataURL();
+      // };
+      // save('shape1');
 
     </script>
 

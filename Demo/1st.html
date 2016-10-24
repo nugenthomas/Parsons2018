@@ -12,13 +12,22 @@ name='viewport' content='width=device-width, initial scale=1 user-scalable=no'>
 <body>
   <h2> Please choose a sound and draw a pattern base on the sound you hear</h2>
     <div><STRONG>Question 1</STRONG>: Please choose a sound.
-  <INPUT TYPE="radio" NAME="q1" VALUE="y">Yes
-  <INPUT TYPE="radio" NAME="q1" VALUE="n">No
+  <INPUT TYPE="radio" NAME="saveharmony" onclick="savedharmony('sound1')">
+<audio id="sound" src="harmony1.mp3" controls preload="auto" autobuffer></audio>
+        <INPUT TYPE="radio" NAME="saveharmony" onclick="savedharmony('sound1')">
+          <audio id="sound" src="harmony2.mp3" controls preload="auto" autobuffer></audio>
+
     </div>
 
 
-  <STRONG>Question 2</STRONG>: Please draw according to the sound you hear.
-  <a href="shape2.html" onclick="save('shape1')";>next</a>
+  <STRONG>Question 2</STRONG>: Please pick a shape that would best describe your chosen sound
+  <a href="shape2.html" onclick="save('shape1')" style="clear:both;
+		margin:20px 0;
+		border:1px solid #000;
+		background: #FFF;
+		font-size: 20px;
+		box-shadow: 2px 2px;
+		cursor: pointer;";>Next</a>
 
     <canvas width="300" height="300" id="paint"
     style="border:1px solid #000000;"></canvas>
@@ -34,24 +43,22 @@ name='viewport' content='width=device-width, initial scale=1 user-scalable=no'>
     <div id="buttons">
       <button onclick="ctx.lineWidth = '1';">Pencil</button>
       <button onclick="ctx.lineWidth = '5';">Brush Stroke</button>
-      <button onclick="color = 'FireBrick';">blood</button>
-      <button onclick="color = 'ForestGreen';">spinach</button>
-      <button onclick="color = '#DAD9D2';">erase</button>
-      <br>
-      <button onclick="size = '6';">small</button>
-      <button onclick="size = '12';">medium</button>
-      <button onclick="size = '24';">large</button>
-      </br>
+
+
+
     </div>
 
     <script>
       var canvas = document.getElementById('paint');
       var ctx = canvas.getContext('2d');
       var mouse = {x: 0, y: 0};
+      var start_mouse = {x: 0, y: 0};
       var last_mouse = {x:0, y:0};
 
       /* Mouse Capturing Work */
     canvas.addEventListener('mousemove', function(e) {
+       canvas.addEventListener('mousemove', onPaint, false);
+
       last_mouse.x = mouse.x;
       last_mouse.y = mouse.y;
 
@@ -84,6 +91,11 @@ name='viewport' content='width=device-width, initial scale=1 user-scalable=no'>
     ctx.stroke();
     };
 
+// var sound1 = {
+//   harmony1.mp3,
+//   harmony2.mp3,
+//   harmony3.mp3
+// };
 
 
 
@@ -91,6 +103,15 @@ name='viewport' content='width=device-width, initial scale=1 user-scalable=no'>
         localStorage[name] = canvas.toDataURL();
       };
       save('shape1');
+
+      var savedharmony = function (sound){
+        localStorage.setItem("sound1", "sound")};
+        savedharmony('sound1');
+
+      // var savesound = function(name){
+      //   localStorage[name] = sound.toDataURL();
+      // };
+      // save('sound')
 
     </script>
 
