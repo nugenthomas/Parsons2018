@@ -4,21 +4,23 @@
   <head>
     <meta charset="urf-8">
     <title>Group Project</title>
-    <link href="style 2.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
   <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="script.js"></script>
   </head>
   <body>
-
-    <audio class="harmony1" src="sound/harmony1.mp3" controls loop></audio>
-    <audio class="harmony2" src="sound/harmony2.mp3" controls loops></audio>
-    <audio class="harmony3" src="sound/harmony3.mp3" controls loop></audio>
-    <audio class="melody1" src="sound/melody1.mp3" controls loop></audio>
-    <audio class="melody2" src="sound/melody2.mp3" controls loop></audio>
-    <audio class="melody3" src="sound/melody3.mp3" controls loop></audio>
-    <audio class="rhythm1" src="sound/rhythm1.mp3" controls loop></audio>
-    <audio class="rhythm2" src="sound/rhythm2.mp3" controls loop></audio>
-    <audio class="rhythm3" src="sound/rhythm3.mp3" controls loop></audio>
+    <h2> Harmony </h2>
+    <audio class="harmony1" src="sound/harmony1.mp3" mediaGroup="soundgroup" controls loop></audio>
+    <audio class="harmony2" src="sound/harmony2.mp3" mediaGroup="soundgroup" controls loops></audio>
+    <audio class="harmony3" src="sound/harmony3.mp3" mediaGroup="soundgroup" controls loop></audio>
+    <h2> Melody </h2>
+    <audio class="melody1" src="sound/melody1.mp3" mediaGroup="soundgroup" controls loop></audio>
+    <audio class="melody2" src="sound/melody2.mp3" mediaGroup="soundgroup" controls loop></audio>
+    <audio class="melody3" src="sound/melody3.mp3" mediaGroup="soundgroup" controls loop></audio>
+    <h3> Rhythm </h3>
+    <audio class="rhythm1" src="sound/rhythm1.mp3" mediaGroup="soundgroup" controls loop></audio>
+    <audio class="rhythm2" src="sound/rhythm2.mp3" mediaGroup="soundgroup" controls loop></audio>
+    <audio class="rhythm3" src="sound/rhythm3.mp3" mediaGroup="soundgroup" controls loop></audio>
 
     <button class="button1" type="button">Harmony1</button>
     <img class="img1" src="asset/1.png"></img>
@@ -52,3 +54,52 @@
 
 
   </body>
+
+  <script>
+  interface HTMLMediaElement : HTMLElement {
+    [...]
+    // media controller
+             attribute DOMString mediaGroup;
+             attribute MediaController? controller;
+  };
+
+  enum MediaControllerPlaybackState { "waiting", "playing", "ended" };
+  [Constructor]
+  interface MediaController : EventTarget {
+    readonly attribute unsigned short readyState; // uses HTMLMediaElement.readyState's values
+
+    readonly attribute TimeRanges buffered;
+    readonly attribute TimeRanges seekable;
+    readonly attribute unrestricted double duration;
+             attribute double currentTime;
+
+    readonly attribute boolean paused;
+    readonly attribute MediaControllerPlaybackState playbackState;
+    readonly attribute TimeRanges played;
+    void pause();
+    void unpause();
+    void play(); // calls play() on all media elements as well
+
+             attribute double defaultPlaybackRate;
+             attribute double playbackRate;
+
+             attribute double volume;
+             attribute boolean muted;
+
+             attribute EventHandler onemptied;
+             attribute EventHandler onloadedmetadata;
+             attribute EventHandler onloadeddata;
+             attribute EventHandler oncanplay;
+             attribute EventHandler oncanplaythrough;
+             attribute EventHandler onplaying;
+             attribute EventHandler onended;
+             attribute EventHandler onwaiting;
+
+             attribute EventHandler ondurationchange;
+             attribute EventHandler ontimeupdate;
+             attribute EventHandler onplay;
+             attribute EventHandler onpause;
+             attribute EventHandler onratechange;
+             attribute EventHandler onvolumechange;
+  };
+  </script>

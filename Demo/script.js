@@ -1,6 +1,7 @@
 $(document).ready(function(){
   $(".button1").click(function(){
-      $(".img1").toggle('show');
+    $(".img1").toggle('show');
+      // $("body").first().css("background", "linear-gradient(296deg,#f7cac9, #89abe3,#a2c5c5,#c5a2c5)");
   });
 
   $(".button2").click(function(){
@@ -38,5 +39,87 @@ $(document).ready(function(){
   $(".button10").click(function(){
       $(".img10").toggle('show');
   });
+
+  $(".button14").click(function(){
+      $(".shape1").toggle('show');
+  });
+  $(".button15").click(function(){
+      $(".shape2").toggle('show');
+  });
+  $(".button16").click(function(){
+      $(".shape3").toggle('show');
+  });
+  $(".button17").click(function(){
+      $(".shape4").toggle('show');
+  });
+  $(".button18").click(function(){
+      $(".shape5").toggle('show');
+  });
+
+
+
+  $(".button11").click(function(){
+
+    if ($('#h1').is(':checked')) {
+          $('.harmony1').trigger("play");}
+        else if ($('#h2').is(':checked')) {
+              $('.harmony2').trigger("play");}
+            else if ($('#h3').is(':checked')){
+              $('.harmony3').trigger("play");}
+              else if ($('#h4').is(':checked')){
+                $('.harmony4').trigger("play");}
+                else if ($('#h5').is(':checked')){
+                  $('.harmony5').trigger("play");}
+
+
+    if ($('#r1').is(':checked')) {
+          $('.rhythm1').trigger("play");}
+          else if  ($('#r2').is(':checked')) {
+                $('.rhythm2').trigger("play")}
+                else if ($('#r3').is(':checked')) {
+                      $('.rhythm3').trigger("play");}
+                      else if ($('#r4').is(':checked')) {
+                            $('.rhythm4').trigger("play");}
+                            else if ($('#r5').is(':checked')) {
+                                  $('.rhythm5').trigger("play");}
+
+
+    if ($('#m1').is(':checked')) {
+          $('.melody1').trigger("play");}
+          else if ($('#m2').is(':checked')) {
+                $('.melody2').trigger("play");}
+                else if ($('#m3').is(':checked')) {
+                      $('.melody3').trigger("play");}
+                      else if ($('#m4').is(':checked')) {
+                            $('.melody4').trigger("play");}
+                            else if ($('#m5').is(':checked')) {
+                                  $('.melody5').trigger("play");}
+
+
+
+  });
+
+
+
+
+
+
+  $(".button12").click(function(){
+      $("audio").trigger('pause');
+      $("audio").prop("currentTime",0);
+
+
+        // $("audio").currentTime=0;}
+  });
+
+  $(".button13").click(function(){
+      $("form").toggle(400);
+      $("audio").toggle(400);
+      $("h2").toggle(400);
+
+
+
+  })
+
 
 });
